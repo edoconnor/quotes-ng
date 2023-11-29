@@ -1,0 +1,10 @@
+<mat-progress-bar mode="indeterminate" *ngIf="loading"></mat-progress-bar>
+<div class="container">
+  <div class="row">
+    <div class="col-12 col-sm-6 col-lg-4" *ngFor="let chart of chartDataArray">
+      <div class="chartBox">
+        <canvas #canvas></canvas>
+      </div>
+    </div>
+  </div>
+</div>

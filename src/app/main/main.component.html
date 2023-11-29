@@ -1,0 +1,12 @@
+<div *ngIf="quotes.length > 0; else noData">
+  <div *ngFor="let quote of quotes">
+    <p>
+      Symbol: {{ quote.symbol }}, Date: {{ quote.date | date : "shortDate" }},
+      Close: {{ quote.close | currency }}
+    </p>
+  </div>
+</div>
+
+<ng-template #noData>
+  <p>No quotes available.</p>
+</ng-template>
