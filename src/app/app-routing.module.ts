@@ -4,13 +4,13 @@ import { MainComponent } from './main/main.component';
 import { Dow30Component } from './dow30/dow30.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/main', pathMatch: 'full' },
-  { path: 'main', component: MainComponent },
+  { path: '', redirectTo: '/dow30', pathMatch: 'full' },
   { path: 'dow30', component: Dow30Component },
+  { path: 'main', component: MainComponent },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}
