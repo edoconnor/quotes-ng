@@ -9,3 +9,7 @@ export interface QuoteResults {
     closes: number[]; // Assuming closes are numbers
   };
 }
+export interface CompanyData {
+  name: string;
+  symbol: string;
+}

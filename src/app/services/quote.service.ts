@@ -16,10 +16,19 @@ export class QuoteService {
 
   constructor(private http: HttpClient) {}
 
-  getDow30(): Observable<Quote[]> {
-    const headers = new HttpHeaders().set('x-api-key', environment.api_key);
+  get30DayChart(symbol: string): Observable<Quote[]> {
     return this.http
-      .get<Quote[]>(`${this.url}/dow30`, { headers: this.headers })
+      .get<Quote[]>(`${this.url}/chart/${symbol}`, { headers: this.headers })
       .pipe(catchError(() => of([])));
+  }
+  getStockName(symbol: string): Observable<any> {
+    return this.http
+      .get(`${this.url}/name/${symbol}`, { headers: this.headers })
+      .pipe(
+        catchError((error) => {
+          console.error('Error fetching ticker info:', error);
+          return of(null);
+        })
+      );
   }
 }

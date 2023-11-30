@@ -1,0 +1,13 @@
+.container {
+  max-width: 800px;
+}
+input {
+  max-width: 30vw;
+}
+h1 {
+  font-family: "Open Sans", sans-serif;
+  font-size: 2rem;
+}
+.title {
+  margin-left: 30px;
+}

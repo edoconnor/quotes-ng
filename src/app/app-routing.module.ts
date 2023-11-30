@@ -1,12 +1,12 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { MainComponent } from './main/main.component';
-import { Dow30Component } from './dow30/dow30.component';
+import { ChartComponent } from './chart/chart.component';
+
 
 const routes: Routes = [
-  { path: '', redirectTo: '/dow30', pathMatch: 'full' },
-  { path: 'dow30', component: Dow30Component },
-  { path: 'main', component: MainComponent },
+  { path: '', redirectTo: '/chart', pathMatch: 'full' },
+  { path: 'chart', component: ChartComponent },
+
 ];
 
 @NgModule({

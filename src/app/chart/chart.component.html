@@ -1,0 +1,15 @@
+<mat-progress-bar mode="indeterminate" *ngIf="loading"></mat-progress-bar>
+<div class="container mt-5">
+  <div *ngIf="companyName" class="title">
+   <h1><strong>{{ companyName }}</strong> </h1> 
+  </div>
+  <canvas #chartCanvas></canvas>
+  <div class="row mt-3 ms-3 mb-3">
+    <div class="col-sm-4">
+      <input [(ngModel)]="symbol" placeholder="Enter stock symbol" class="form-control">
+    </div>
+    <div class="col-sm-4">
+      <button (click)="fetchStockData()" class="btn btn-primary">Get Chart</button>
+    </div>
+  </div>
+</div>
