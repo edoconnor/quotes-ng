@@ -26,7 +26,7 @@ export class ChartComponent implements OnInit, AfterViewInit {
   constructor(private quoteService: QuoteService) {}
 
   ngOnInit(): void {
-    this.symbol = 'djia';
+    this.symbol = 'DJIA';
     this.fetchStockData();
   }
 
