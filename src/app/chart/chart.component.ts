@@ -25,7 +25,10 @@ export class ChartComponent implements OnInit, AfterViewInit {
 
   constructor(private quoteService: QuoteService) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.symbol = 'djia';
+    this.fetchStockData();
+  }
 
   ngAfterViewInit() {
     this.initializeChart();
@@ -77,7 +80,7 @@ export class ChartComponent implements OnInit, AfterViewInit {
   fetchStockData() {
     if (this.symbol) {
       this.loading = true;
-      this.fetchCompanyName(this.symbol); // Fetch company name
+      this.fetchCompanyName(this.symbol);
       this.quoteService.get30DayChart(this.symbol).subscribe(
         (data) => {
           this.stockData = data;
